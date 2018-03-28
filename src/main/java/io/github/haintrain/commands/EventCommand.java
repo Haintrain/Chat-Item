@@ -39,10 +39,10 @@ public class EventCommand implements CommandExecutor {
             emote.put(player.getUniqueId(), emote.get(player.getUniqueId()).concat(message.substring(0, message.length() -1)));
         }
         else if(emote.get(player.getUniqueId()) != null){
-            Utility.chatNearby(player, 20, emote.get(player.getUniqueId()).concat(message.substring(0, message.length() - 1)));
+            Utility.chatNearby(player, 20, "§8{§4!§8} §7" + emote.get(player.getUniqueId()).concat(message.substring(0, message.length() - 1)) + "§8{§4!§8}");
         }
         else{
-            Utility.chatNearby(player, 20, message);
+            Utility.chatNearby(player, 20, "§8{§4!§8} §7" + message + "§8{§4!§8}");
         }
 
 

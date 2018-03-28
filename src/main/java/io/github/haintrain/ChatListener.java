@@ -9,10 +9,11 @@ import org.spongepowered.api.text.Text;
 
 public class ChatListener {
 
-    private String channel;
+    private String channel, channelWhisper;
 
     public ChatListener(){
         channel = ConfigurationManager.getInstance().getConfig().getNode("channelName").getString();
+        channelWhisper = ConfigurationManager.getInstance().getConfig().getNode("channelWhisperName").getString();
     }
 
     @Listener
@@ -23,7 +24,7 @@ public class ChatListener {
 
         Player player = ((Player) e.getSender()).getPlayer().get();
 
-        if(e.getChannel().getAlias().equals(channel)){
+        if(e.getChannel().getAlias().equals(channel) || e.getChannel().getAlias().equals(channelWhisper)){
             String name = NameManager.getInstance().getName(player.getUniqueId());
 
             String message = e.getMessage().toPlain();

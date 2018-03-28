@@ -23,7 +23,7 @@ public class EmoteCommand implements CommandExecutor {
         String text = args.<String>getOne(Text.of("text")).get();
         Player player = (Player) src;
 
-        Utility.chatNearby(player, 30, nameManager.getName(player.getUniqueId()) + " " + text);
+        Utility.chatNearby(player, 30, "§e**" + nameManager.getName(player.getUniqueId()) + " " + text + "**");
 
         return CommandResult.success();
     }

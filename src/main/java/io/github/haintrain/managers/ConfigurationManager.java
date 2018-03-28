@@ -26,6 +26,7 @@ public class ConfigurationManager {
                 loadConfig();
                 config.getNode("eventRange").setComment("Event chat range").setValue(20);
                 config.getNode("channelName").setComment("Chat channel").setValue("local");
+                config.getNode("channelWhisperName").setComment("Chat whisper channel").setValue("whisper");
                 saveConfig();
             }
             catch (Exception e) {
