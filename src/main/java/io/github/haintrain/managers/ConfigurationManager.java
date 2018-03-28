@@ -25,6 +25,8 @@ public class ConfigurationManager {
                 configFile.createNewFile();
                 loadConfig();
                 config.getNode("eventRange").setComment("Event chat range").setValue(20);
+                config.getNode("emoteRange").setComment("Emote chat range").setValue(20);
+                config.getNode("rollRange").setComment("Roll chat range").setValue(20);
                 config.getNode("channelName").setComment("Chat channel").setValue("local");
                 config.getNode("channelWhisperName").setComment("Chat whisper channel").setValue("whisper");
                 saveConfig();

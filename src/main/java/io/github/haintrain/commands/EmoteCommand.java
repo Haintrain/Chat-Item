@@ -1,6 +1,7 @@
 package io.github.haintrain.commands;
 
-import io.github.haintrain.managers.NameManager;
+import io.github.haintrain.managers.ConfigurationManager;
+import io.github.haintrain.util.Utility;
 import org.spongepowered.api.command.CommandException;
 import org.spongepowered.api.command.CommandResult;
 import org.spongepowered.api.command.CommandSource;
@@ -8,11 +9,14 @@ import org.spongepowered.api.command.args.CommandContext;
 import org.spongepowered.api.command.spec.CommandExecutor;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.text.Text;
-import io.github.haintrain.util.Utility;
+
+import java.util.HashMap;
+import java.util.UUID;
 
 public class EmoteCommand implements CommandExecutor {
 
-    private NameManager nameManager = NameManager.getInstance();
+    private int emoteRange = ConfigurationManager.getInstance().getConfig().getNode("emoteRange").getInt();
+    private HashMap<UUID, String> emote = new HashMap<>();
 
     public CommandResult execute(CommandSource src, CommandContext args) throws CommandException {
         if (!(src instanceof Player)) {
@@ -20,11 +24,39 @@ public class EmoteCommand implements CommandExecutor {
             return CommandResult.empty();
         }
 
-        String text = args.<String>getOne(Text.of("text")).get();
+
+        String message = args.<String>getOne(Text.of("text")).get();
         Player player = (Player) src;
 
-        Utility.chatNearby(player, 30, "§e**" + nameManager.getName(player.getUniqueId()) + " " + text + "**");
+        if(message.equals("reload")){
+            reloadEmoteRange();
+            return CommandResult.success();
+        }
+
+        if(message.equals("clear")){
+            emote.remove(player.getUniqueId());
+            return CommandResult.success();
+        }
+
+        if(message.charAt(message.length() - 1) == '-' && emote.get(player.getUniqueId()) == null){
+            emote.put(player.getUniqueId(), message.substring(0, message.length() - 1));
+        }
+        else if(message.charAt(message.length() - 1) == '-' && emote.get(player.getUniqueId()) != null){
+            emote.put(player.getUniqueId(), emote.get(player.getUniqueId()).concat(message.substring(0, message.length() -1)));
+        }
+        else if(emote.get(player.getUniqueId()) != null){
+            Utility.chatNearby(player, emoteRange, "§8{§4!§8} §7" + emote.get(player.getUniqueId()).concat(message.substring(0, message.length() - 1)) + "§8{§4!§8}");
+        }
+        else{
+            Utility.chatNearby(player, emoteRange, "§8{§4!§8} §7" + message + "§8{§4!§8}");
+        }
+
+
 
         return CommandResult.success();
+    }
+
+    private void reloadEmoteRange(){
+        emoteRange = ConfigurationManager.getInstance().getConfig().getNode("eventRange").getInt();
     }
 }

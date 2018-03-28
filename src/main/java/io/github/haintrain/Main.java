@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import io.github.haintrain.commands.*;
 import io.github.haintrain.managers.*;
 import io.github.haintrain.nbt.*;
+import io.github.haintrain.util.Utility;
 import ninja.leaping.configurate.commented.CommentedConfigurationNode;
 import ninja.leaping.configurate.loader.ConfigurationLoader;
 import org.slf4j.Logger;
@@ -51,8 +52,6 @@ public class Main {
         configurationManager = new ConfigurationManager();
 
         ConfigurationManager.getInstance().setup(configFile, configManager);
-
-
 
         cmdManager = Sponge.getCommandManager();
 
@@ -108,7 +107,7 @@ public class Main {
                 .description(Text.of("Event command"))
                 .arguments(
                         GenericArguments.remainingJoinedStrings(Text.of("text")))
-                .executor(new EventCommand() )
+                .executor(new EmoteCommand() )
                 .build();
 
         nameCommandSpec = CommandSpec.builder()

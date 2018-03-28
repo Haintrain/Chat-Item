@@ -5,7 +5,11 @@ import org.spongepowered.api.text.Text;
 
 import java.util.Random;
 
-public class Utility {
+public final class Utility {
+
+    private Utility() {
+    }
+
     public static int randomRange(int low, int high)
     {
         Random generator = new Random();
