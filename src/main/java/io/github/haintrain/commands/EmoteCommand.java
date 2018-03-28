@@ -42,13 +42,13 @@ public class EmoteCommand implements CommandExecutor {
             emote.put(player.getUniqueId(), message.substring(0, message.length() - 1));
         }
         else if(message.charAt(message.length() - 1) == '-' && emote.get(player.getUniqueId()) != null){
-            emote.put(player.getUniqueId(), emote.get(player.getUniqueId()).concat(message.substring(0, message.length() -1)));
+            emote.put(player.getUniqueId(), emote.get(player.getUniqueId()).concat(message.substring(1, message.length() -1)));
         }
         else if(emote.get(player.getUniqueId()) != null){
-            Utility.chatNearby(player, emoteRange, "§8{§4!§8} §7" + emote.get(player.getUniqueId()).concat(message.substring(0, message.length() - 1)) + "§8{§4!§8}");
+            Utility.chatNearby(player, emoteRange, "&8{&4!&8}&7" + emote.get(player.getUniqueId()).concat(message.substring(0, message.length() - 1)) + "&8{&4!&8}");
         }
         else{
-            Utility.chatNearby(player, emoteRange, "§8{§4!§8} §7" + message + "§8{§4!§8}");
+            Utility.chatNearby(player, emoteRange, "&8{&4!&8}&7" + message + "&8{&4!&8}");
         }
 
 

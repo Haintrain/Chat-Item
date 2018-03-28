@@ -104,10 +104,11 @@ public class Main {
                 .build();
 
         eventCommandSpec = CommandSpec.builder()
+                .permission("nbt.event")
                 .description(Text.of("Event command"))
                 .arguments(
                         GenericArguments.remainingJoinedStrings(Text.of("text")))
-                .executor(new EmoteCommand() )
+                .executor(new EventCommand() )
                 .build();
 
         nameCommandSpec = CommandSpec.builder()

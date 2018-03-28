@@ -30,7 +30,7 @@ public class EventCommand implements CommandExecutor {
             return CommandResult.success();
         }
 
-        Utility.chatNearby(player, eventRange, "§e**" + nameManager.getName(player.getUniqueId()) + " " + message + "**");
+        Utility.chatNearby(player, eventRange, "&e**" + nameManager.getName(player.getUniqueId()) + " " + message + "**");
 
         return CommandResult.success();
     }

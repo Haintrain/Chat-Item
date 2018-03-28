@@ -9,6 +9,7 @@ import org.spongepowered.api.data.key.Keys;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.text.Text;
+import org.spongepowered.api.text.serializer.TextSerializers;
 import org.spongepowered.api.util.Color;
 
 import java.util.Optional;
@@ -26,16 +27,13 @@ public class NBTName implements CommandExecutor{
         Player player = (Player) src;
         String name = args.<String>getOne(Text.of("name")).get();
 
-        player.sendMessage(Text.of(player.getName()));
-
         Optional<ItemStack> optional = player.getItemInHand(MAIN_HAND);
 
         if(optional.isPresent()) {
             ItemStack item = optional.get();
-            src.sendMessage(Text.of("Set name of item to " + name));
+            src.sendMessage(Text.of("§4Set name of item to " + name));
 
-            item.offer(Keys.DISPLAY_NAME, Text.of(name));
-            item.offer(Keys.COLOR, Color.GREEN);
+            item.offer(Keys.DISPLAY_NAME, Text.of(TextSerializers.FORMATTING_CODE.deserialize(name)));
 
             player.setItemInHand(MAIN_HAND, item);
             return CommandResult.success();

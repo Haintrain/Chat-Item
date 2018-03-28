@@ -37,10 +37,10 @@ public class RollCommand implements CommandExecutor{
             int mod = optMod.orElse(0);
             result += mod;
 
-            Utility.chatNearby(player, rollRange,  "§e" + nameManager.getName(player.getUniqueId()) + "§7 rolled a §a" + Integer.toString(result) + " out of " + Integer.toString(roll) + "§7 with a base modifier of " + Integer.toString(mod));
+            Utility.chatNearby(player, rollRange,  "&e" + nameManager.getName(player.getUniqueId()) + "&7 rolled a &a" + Integer.toString(result) + " out of " + Integer.toString(roll) + "&7 with a base modifier of " + Integer.toString(mod));
         }
         else {
-            Utility.chatNearby(player, rollRange, "§e" + nameManager.getName(player.getUniqueId()) + "&7 rolled a §a" + Integer.toString(result) + " out of " + Integer.toString(roll));
+            Utility.chatNearby(player, rollRange, "&e" + nameManager.getName(player.getUniqueId()) + "&7 rolled a &a" + Integer.toString(result) + " out of " + Integer.toString(roll));
         }
 
         return CommandResult.success();

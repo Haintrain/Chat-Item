@@ -9,6 +9,7 @@ import org.spongepowered.api.data.key.Keys;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.item.inventory.ItemStack;
 import org.spongepowered.api.text.Text;
+import org.spongepowered.api.text.serializer.TextSerializers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,16 +44,16 @@ public class NBTLore implements CommandExecutor{
             }
 
             if(line >= lore.size()){
-                lore.add(Text.of(text));
+                lore.add(Text.of(TextSerializers.FORMATTING_CODE.deserialize(text)));
             }
             else {
-                lore.set(line, Text.of(text));
+                lore.set(line, Text.of(TextSerializers.FORMATTING_CODE.deserialize(text)));
             }
 
             item.offer(Keys.ITEM_LORE, lore);
 
             player.setItemInHand(MAIN_HAND, item);
-            src.sendMessage(Text.of("Line " + (line + 1) + " added to lore: " + text));
+            src.sendMessage(Text.of("§4Line " + (line + 1) + " added to lore: " + Text.of(TextSerializers.FORMATTING_CODE.deserialize(text))));
             return CommandResult.success();
         }
 
