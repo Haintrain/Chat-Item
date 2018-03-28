@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac86cd12-a6b6-4fba-866a-7cfcf40fa97c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EmoteCommand.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EmoteCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EventCommand.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EventCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/RollCommand.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/RollCommand.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTLore.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTLore.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTName.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTName.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/haintrain/util/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/io/github/haintrain/util/Utility.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -30,12 +23,12 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="88" column="47" lean-forward="false" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+            <state relative-caret-position="685">
+              <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5353#5354#0" expanded="true" />
-                <element signature="e#5382#5383#0" expanded="true" />
+                <element signature="e#5352#5353#0" expanded="true" />
+                <element signature="e#5381#5382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,10 +155,10 @@
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EmoteCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/util/Utility.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/RollCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/commands/EventCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTLore.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/nbt/NBTName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java" />
       </list>
     </option>
   </component>
@@ -415,7 +408,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -563,8 +555,8 @@
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5353#5354#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -593,8 +585,8 @@
           <caret line="71" column="50" lean-forward="false" selection-start-line="71" selection-start-column="50" selection-end-line="71" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5353#5354#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -868,12 +860,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/github/haintrain/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="88" column="47" lean-forward="false" selection-start-line="88" selection-start-column="47" selection-end-line="88" selection-end-column="47" />
+        <state relative-caret-position="685">
+          <caret line="152" column="0" lean-forward="false" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5353#5354#0" expanded="true" />
-            <element signature="e#5382#5383#0" expanded="true" />
+            <element signature="e#5352#5353#0" expanded="true" />
+            <element signature="e#5381#5382#0" expanded="true" />
           </folding>
         </state>
       </provider>

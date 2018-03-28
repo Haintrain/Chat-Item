@@ -91,7 +91,6 @@ public class Main {
                 .arguments(
                         GenericArguments.onlyOne(GenericArguments.optional(GenericArguments.integer(Text.of("roll")))),
                         GenericArguments.onlyOne(GenericArguments.optional(GenericArguments.integer(Text.of("mod"))))
-
                 )
                 .executor(new RollCommand() )
                 .build();
@@ -151,7 +150,6 @@ public class Main {
         cmdManager.register(this, emoteCommandSpec,  "me");
         cmdManager.register(this, nameCommandSpec, "name");
         cmdManager.register(this, eventCommandSpec, "eb");
-
 
         Sponge.getEventManager().registerListeners(this, new ChatListener());
     }
