@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NBT">
+    <output-path>$USER_HOME$/Desktop/Sponge/mods</output-path>
+    <root id="archive" name="NBT.jar">
+      <element id="module-output" name="NBT-1.0" />
+    </root>
+  </artifact>
+</component>
